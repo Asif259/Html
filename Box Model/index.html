@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header > nav {
+            background-color: cornflowerblue;
+            color: white;
+            padding: 10px ;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        aside{
+            float: left;
+            padding: 10px;
+            height: 80vh;
+            margin-right: 50px;
+        }
+        li{
+            list-style: none;
+        }
+
+        li> a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .lesson{
+            display: flex;
+            gap: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">Courses</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+
+    <aside>
+        <li><a href="">Dashboard</a></li>
+        <li><a href="">Calender</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Students</a></li>
+    </aside>
+
+    <main>
+        <section>
+            <h1>Lesson 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, nam.</p>
+        </section>
+
+        <section class="lesson">
+            <div>
+                <h1>Overview</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, nam.</p>
+            </div>
+
+            <div>
+                <h1>Objectives</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, nam.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

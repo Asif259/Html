@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0D1117;
+            color: #d7dade;
+        }
+
+        h1{
+            color: #58a6ff;
+            text-align: center;
+            text-shadow: 2px 2px 2px whitesmoke;
+        }
+
+        ol > li{
+            color: #58a6ff;
+            font-size: 1.5rem;
+        }
+
+        ol > li:nth-child(odd){
+            color: #7d8998;
+        }
+
+        ol > li:hover{
+            color: white;
+        }
+
+         ol > li::after{ /*or before */
+            content: "🚀";
+        }
+        
+
+        h5 , p{
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        h5::first-letter{
+            font-size: 2rem;
+            color: #eb0a60;
+            text-transform: uppercase;
+        }
+
+        a{
+            background-color: #58a6ff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 2px solid #d7dade;
+            border-radius: 5px;
+        }
+
+        a:hover{
+            background-color: aqua;
+            font-size: 20px;
+        }
+
+        input[type="email"]{
+            border: 2px solid red;
+        }
+
+        input[type="password"]{
+            border: 2px solid rgb(42, 206, 24);
+        }
+
+    </style>
+</head>
+<body>
+   <h1>Let's Explore</h1>
+   
+   <li>hello</li>
+   <li>World</li>
+
+   <h3>Lists</h3>
+   <ol type="A">
+        <li>Moon missions</li>
+        <li>SpaceX</li>
+        <li>Space tourism</li>
+        <li>SpaceY</li>
+        <li>Space tourism</li>
+   </ol>
+
+   <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, itaque.</p>
+
+   <h5>lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, doloremque?</h5>
+
+   <input type="email" placeholder="Enter your email">
+    <input type="password" placeholder="Enter your password">
+     <br> <br>
+
+   <a href="#">Join</a>
+   <a href="#">Sign in</a>
+    <a href="#">Sign up</a>
+</body>
+</html>
