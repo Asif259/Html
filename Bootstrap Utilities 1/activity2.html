@@ -10,51 +10,71 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <style>
-          .link:hover{
-            background-color: #0b5ed7;
-        }
-    </style>
+    <style></style>
   </head>
   <body>
-    <div
-      style="height: 200px"
-      class="bg-dark d-flex align-items-center justify-content-around"
-    >
-      <button class="btn btn-primary ">Primary</button>
-      <button class="btn btn-secondary">Secondary</button>
-      <button class="btn btn-info">Info</button>
-      <button class="btn btn-warning">Warning</button>
-      <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-primary">Submit</button>
+
+    <a href="" class="btn btn-primary" role="button">Link</a>
+
+    <button class="btn btn-outline-success btn-sm">Submit</button>
+
+    <button class="btn btn-outline-success" disabled>Disabled</button>
+
+    <button type="button" class="btn" data-bs-toggle="button">
+      Toggle button
+    </button>
+
+    <div class="dropdown">
+      <button
+        class="btn btn-danger dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Another one</a></li>
+      </ul>
     </div>
 
-    <div
-      style="height: 200px"
-      class="bg-dark d-flex align-items-center justify-content-center"
-    >
-      <h1 class="text-white">
-        Example of <span class="badge bg-secondary">Badge</span>
-      </h1>
+    <p class="d-inline-flex gap-1">
+      <a
+        class="btn btn-primary"
+        data-bs-toggle="collapse"
+        href="#collapse1Example"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapse1Example"
+      >
+        Link with href
+      </a>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse2Example"
+        aria-expanded="false"
+        aria-controls="collapse2Example"
+      >
+        Button with data-bs-target
+      </button>
+    </p>
+    <div class="collapse" id="collapse1Example">
+      <div class="card card-body">
+        Some placeholder content for the collapse component. This panel is
+        hidden by default but revealed when the user activates the relevant
+        trigger.
+      </div>
     </div>
 
-    <div
-      style="height: 200px"
-      class="bg-dark d-flex align-items-center justify-content-around"
-    >
-      <div class="dropdown">
-        <button
-          class="btn btn-primary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu bg-secondary ">
-          <li><a class="dropdown-item link-light link" href="#">Action</a></li>
-          <li><a class="dropdown-item link-light link" href="#">Another action</a></li>
-          <li><a class="dropdown-item link-light link" href="#">Something else here</a></li>
-        </ul>
+    <div class="collapse" id="collapse2Example">
+      <div class="card card-body">
+        Second
       </div>
     </div>
 
