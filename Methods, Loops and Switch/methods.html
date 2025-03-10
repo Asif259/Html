@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var string = "abcDEf";
+        document.write(string.toUpperCase());
+        document.write("<br>");
+        document.write(string.toLowerCase());
+        document.write("<br>");
+        document.write(string.startsWith('c', 2));
+        document.write("<br>");
+        document.write(string.replace("a", "b"));
+        document.write("<br>");
+
+        var str1 = "Abcdefgh";
+        var pattern = new RegExp('^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
+        document.write(pattern.test(str1));
+
+    </script>
+</body>
+</html>
