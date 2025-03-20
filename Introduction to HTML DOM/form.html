@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <form action="" id="loginForm" onsubmit="validate(event)">
+      <div>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email" />
+      </div>
+
+      <div>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" />
+      </div>
+
+      <div>
+        <label for="confirmpassword">Confirm Password: </label>
+        <input type="password" id="confirmpassword" name="confirmpassword" />
+      </div>
+
+      <div>
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="age" />
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+      function validate(e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const pass = document.getElementById("password").value;
+        const confirmPass = document.getElementById("confirmpassword").value;
+        const age = document.getElementById("age").value;
+        const msgBox = document.getElementById("message");
+
+        let message = "";
+
+        // Email validation
+        if (email === "") {
+          message = "Please enter an email.";
+          msgBox.style.color = "red";
+        }
+        // Password validation
+        else if (pass === "" || pass.length < 8) {
+          message = "Password must be at least 8 characters.";
+          msgBox.style.color = "red";
+        }
+        // Confirm password validation
+        else if (pass !== confirmPass) {
+          message = "Passwords do not match.";
+          msgBox.style.color = "red";
+        }
+        // Age validation
+        else if (age === "" || age < 12 || age > 50) {
+          message = "Age must be between 12 and 50.";
+          msgBox.style.color = "red";
+        }
+        // Success message
+        else {
+          message = "Registration successful!";
+          msgBox.style.color = "green";
+        }
+
+        msgBox.innerText = message;
+      }
+    </script>
+  </body>
+</html>

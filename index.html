@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Section Example</title>
+    <style>
+        /* Basic styling for the section */
+        #animated-section {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            position: relative;
+            left: -350px; /* Start off-screen */
+            transition: left 1s ease-in-out, background-color 1s ease-in-out;
+        }
+
+        /* Button styling */
+        #animate-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <p id="result"></p>
+    <h1>Animated Section Example</h1>
+    <button id="animate-button">Animate Section</button>
 
-  <script>
-    let randomNumbers = []
-    for(i=0; i<5; i++){
-      randomNumbers.push(Math.floor(Math.random() * 100000))
-    }
+    <!-- Section to be animated -->
+    <div id="animated-section">
+        <p>This section will slide in and change color!</p>
+    </div>
 
-    var currentDate = new Date();
-    
-    document.getElementById("result").innerHTML = `<p> ${randomNumbers}<p/> 
-      <p>currentdate: ${currentDate.getHours()}</p>
-      `
-  </script>
+    <script>
+        // JavaScript to handle the animation
+        const animateButton = document.getElementById('animate-button');
+        const animatedSection = document.getElementById('animated-section');
+
+        animateButton.addEventListener('click', () => {
+            // Toggle the position and background color
+            if (animatedSection.style.left === '-350px' || animatedSection.style.left === '') {
+                animatedSection.style.left = '0'; // Slide in
+                animatedSection.style.backgroundColor = 'lightgreen'; // Change color
+            } else {
+                animatedSection.style.left = '-350px'; // Slide out
+                animatedSection.style.backgroundColor = 'lightblue'; // Revert color
+            }
+        });
+    </script>
 </body>
 </html>
