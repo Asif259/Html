@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS class</h2>
+    <p id="s1"></p>
+    <div id="display"></div>
+    <script>
+        class Student {
+            constructor(name, birthYear){
+                this.name = name;
+                this.birthYear = birthYear;
+            }
+
+            age(){
+                let date = new Date();
+                let currentYear = date.getFullYear();
+                return currentYear - this.birthYear;
+            }
+        }
+
+        let student1 = new Student("Ibnat", 2012)
+        document.getElementById("s1").innerHTML = `Name: ${student1.name} Birthyear: ${student1.birthYear} Age: ${student1.age()}`
+
+        const display =  document.getElementById("display");
+
+        students= [
+            new Student("Ibnat", 2012),
+            new Student("Subah", 2010),
+            new Student("Arunav", 2005),
+            new Student("Asif", 2000)
+        ]
+
+        students.forEach(student => {
+            const p = document.createElement('p')
+            p.innerHTML = `Name: ${student.name}, Birthyear: ${student.birthYear}, Age: ${student.age()}`;
+
+            display.appendChild(p);
+        });
+        
+    </script>
+</body>
+</html>
