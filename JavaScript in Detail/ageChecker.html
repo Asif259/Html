@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Age checker</h2>
+    <p>Enter your age to check if you are an adult</p>
+    <input type="text" placeholder="Enter age" id="ageInput">
+    <button onclick="checkAge()">Check</button>
+    <div id="result"></div>
+
+    <script>
+        function checkAge(){
+            const ageInput = document.getElementById("ageInput").value;
+            const result = document.getElementById("result")
+
+            try{
+                if(!ageInput){
+                    throw new Error("Please enter your age")
+                }
+                if(isNaN(ageInput)){
+                     throw new Error("Please enter a valid age")
+                }
+                if(ageInput < 0 || ageInput > 120){
+                     throw new Error("Please enter a realastic age value")
+                }
+
+                const age = Number(ageInput)
+                if(age >= 18){
+                    result.textContent = "You are an adult"
+                } else{
+                    result.textContent = "You are not an adult"
+                }
+
+
+            } catch(error){
+                result.textContent = `Error: ${error.message}`
+                
+            }
+        }
+       
+    </script>
+</body>
+</html>
