@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <script>
+        let student = {
+            name: "John",
+            age: 20,
+            grade: "A",
+        }
+
+        let serverData = JSON.stringify(student)
+        let clientData = JSON.parse(serverData)
+        
+        document.getElementById("result1").innerHTML = serverData
+
+        document.getElementById("result2").innerHTML = `Name: ${clientData.name}, Age: ${clientData.age}, Grade: ${clientData.grade}`
+    </script>
+</body>
+</html>

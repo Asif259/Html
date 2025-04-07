@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function display(data){
+            document.write(data)
+        }
+
+        function sum (a, b){
+            let sum = a + b;
+            display(sum)
+        }
+
+        let promise = new Promise(
+            function(resolve, reject){
+                let x =0;
+                if (x ==0){
+                    resolve("ok")
+                }
+                else{
+                    reject("Error")
+                }
+            }
+        );
+
+        promise.then(
+            function(value) {
+               sum(5, 5);
+            },
+            function (error){
+                document.write(error);  
+            }
+        )
+    </script>
+</body>
+</html>
