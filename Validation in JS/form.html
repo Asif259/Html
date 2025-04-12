@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="myForm">
+      <label for="name">Name: <input type="text" id="name" /></label>
+      <div id="nameError" class="error"></div>
+      <br />
+      <label for="email">Email: <input type="text" id="email" /></label>
+      <div id="emailError" class="error"></div>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      document.getElementById("myForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          let valid = true;
+          document.querySelectorAll(".error").forEach((element) => (element.textContent = " "));
+
+          //name validation
+          const name = document.getElementById("name").value.trim();
+          const nameError = document.getElementById("nameError");
+          if (!name) {
+            nameError.innerHTML = "Name is required";
+            valid = false;
+          } else if (name.length < 3 || name.length > 20) {
+            nameError.innerHTML = "Name must be not within 3 to 20 charechters";
+            valid = false;
+          }
+          //email validation
+          const email = document.getElementById("email").value.trim();
+          const emailError = document.getElementById("emailError");
+          const emailRegex = /^\S+@\S+\.\S+$/;
+          if (!email) {
+            emailError.innerHTML = "Email is required";
+          } else if (!emailRegex.test(email)) {
+            emailError.innerHTML = "invalid email format";
+            valid = false;
+          }
+        });
+    </script>
+  </body>
+</html>
