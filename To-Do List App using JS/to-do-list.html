@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #error{
+            color: red;
+        }
+
+        body{
+            background-color: "#f5f5f5";
+        }
+
+        #myForm{
+            display: flex;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Add your To Do Items here</h2>
+
+    <form id="myForm">
+        <input type="text" id="myInput">
+        <button>Add</button>
+        <div id="error"></div>
+    </form>
+
+    <h3>To Do list</h3>
+    <ul id="myItem"></ul>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const input = document.getElementById("myInput");
+        const item = document.getElementById("myItem");
+        
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const error = document.getElementById("error");
+            const task = input.value.trim();
+            if (task === ""){
+                error.textContent = "Please enter a task";
+                return null;
+            }
+
+            error.textContent = "";
+
+            const items = `<li>${input.value} <button onClick="deleteElement(this)">Delete</button> </li>`
+
+            item.insertAdjacentHTML("beforeend", items);
+            input.value = "";
+            input.focus()
+            
+        });
+
+        function deleteElement(element){
+            element.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
