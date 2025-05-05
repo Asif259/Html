@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dice{
+            font-size: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>Click on the dice....</div>
+    <div id="dice" onclick="startstop()">&#9861;</div>
+
+
+    <script>
+        let dice = document.getElementById('dice');
+        let dices = [1, 2, 3, 4 , 5, 6];
+        let stopped = true;
+        
+        function change(){
+            const random = Math.floor(Math.random()*6);
+            dice.innerHTML = dices[random];
+        }
+
+        let intervalValid = null;
+
+        function startstop(){
+            if (stopped){
+                intervalValid = setInterval(change, 100)
+                stopped = false;
+            } else{
+                clearInterval(intervalValid);
+                stopped = true;
+            }
+        }
+    </script>
+</body>
+</html>
