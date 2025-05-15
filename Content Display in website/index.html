@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .img{
+            position: relative;
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-1{
+            background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=');
+        }
+
+        .img-2{
+            background-image: url('https://images.pexels.com/photos/18912054/pexels-photo-18912054.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200');
+        }
+        .section{
+            padding: 40px 30px;
+        }
+        .section-light{
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .section-dark{
+            background-color: #282e34;
+            color: #f4f4f4;
+        }
+
+        .img-text{
+            color: white;
+            font-size: 2.5rem;
+            letter-spacing: 0.4rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="img img-1">
+        <div class="img-text">
+            <span class="border">
+                Welcome to our Parallax World
+            </span>
+        </div>
+   </div>
+
+
+   <section class="section section-light">
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci corporis veritatis animi ipsum at eos exercitationem mollitia dignissimos, ea temporibus.</p>
+   </section>
+
+   <div class="img img-2">
+        <div class="img-text">
+            <span class="border">
+                Let's Explore
+            </span>
+        </div>
+   </div>
+
+   <section class="section section-dark">
+        <h2>Techinal features</h2>
+        <p>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem, ipsum.</li>
+        </p>
+   </section>
+</body>
+</html>
